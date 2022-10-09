@@ -732,6 +732,9 @@ RegisterCommand('inventory', function()
                 elseif vehicleClass == 9 then
                     maxweight = 60000
                     slots = 35
+                elseif vehicleClass == 10 then
+                    maxweight = 4000000
+                    slots = 60
                 elseif vehicleClass == 11 then
                     maxweight = 600000
                     slots = 35
