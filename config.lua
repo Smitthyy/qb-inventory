@@ -218,7 +218,7 @@ Config.AttachmentCrafting = {
     ["items"] = {
         [1] = {
             name = "pistol_extendedclip",
-            amount = 50,
+            amount = 10,
             info = {},
             costs = {
                 ["metalscrap"] = 140,
@@ -232,7 +232,7 @@ Config.AttachmentCrafting = {
         },
         [2] = {
             name = "pistol_suppressor",
-            amount = 50,
+            amount = 10,
             info = {},
             costs = {
                 ["metalscrap"] = 165,
@@ -246,7 +246,7 @@ Config.AttachmentCrafting = {
         },
         [3] = {
             name = "smg_extendedclip",
-            amount = 50,
+            amount = 10,
             info = {},
             costs = {
                 ["metalscrap"] = 190,
@@ -260,7 +260,7 @@ Config.AttachmentCrafting = {
         },
         [4] = {
             name = "microsmg_extendedclip",
-            amount = 50,
+            amount = 5,
             info = {},
             costs = {
                 ["metalscrap"] = 205,
@@ -274,7 +274,7 @@ Config.AttachmentCrafting = {
         },
         [5] = {
             name = "smg_drum",
-            amount = 50,
+            amount = 5,
             info = {},
             costs = {
                 ["metalscrap"] = 230,
@@ -288,7 +288,7 @@ Config.AttachmentCrafting = {
         },
         [6] = {
             name = "smg_scope",
-            amount = 50,
+            amount = 5,
             info = {},
             costs = {
                 ["metalscrap"] = 255,
@@ -302,7 +302,7 @@ Config.AttachmentCrafting = {
         },
         [7] = {
             name = "assaultrifle_extendedclip",
-            amount = 50,
+            amount = 5,
             info = {},
             costs = {
                 ["metalscrap"] = 270,
@@ -317,7 +317,7 @@ Config.AttachmentCrafting = {
         },
         [8] = {
             name = "assaultrifle_drum",
-            amount = 50,
+            amount = 5,
             info = {},
             costs = {
                 ["metalscrap"] = 300,
