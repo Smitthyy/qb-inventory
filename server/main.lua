@@ -2128,15 +2128,33 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
 				QBCore.Functions.Notify(src, "You don't have enough cash..", "error")
 			end
 		else
-			if Player.Functions.RemoveMoney("cash", price, "unkown-itemshop-bought-item") then
+			if Player.Functions.RemoveMoney("cash", price, "unknown-itemshop-bought-item") then
 				AddItem(src, itemData.name, fromAmount, toSlot, itemData.info)
 				QBCore.Functions.Notify(src, itemInfo["label"] .. " bought!", "success")
-				TriggerEvent("qb-log:server:CreateLog", "shops", "Shop item bought", "green", "**"..GetPlayerName(src) .. "** bought a " .. itemInfo["label"] .. " for $"..price)
+				
+				if fromInventory == "itemshop-police" then
+					if itemData.info.serie then
+						TriggerEvent("qb-log:server:CreateLog", "pdarmory", "Weapon taken from PD armory", "green", "**"..GetPlayerName(src) .. " signed out a weapon ("..QBCore.Shared.Items[itemData.name].label..") from the police armory. Serial: "..itemData.info.serie.." |  Quantity: "..fromAmount)
+					else
+						TriggerEvent("qb-log:server:CreateLog", "pdarmory", "Item taken from PD armory", "green", "**"..GetPlayerName(src) .. " grabbed a "..QBCore.Shared.Items[itemData.name].label.." from the police armory |  Quantity: "..fromAmount)
+					end
+				else
+					TriggerEvent("qb-log:server:CreateLog", "shops", "Shop item bought", "green", "**"..GetPlayerName(src) .. "** bought a " .. itemInfo["label"] .. " for $"..price)
+				end
 			elseif bankBalance >= price then
-				Player.Functions.RemoveMoney("bank", price, "unkown-itemshop-bought-item")
+				Player.Functions.RemoveMoney("bank", price, "unknown-itemshop-bought-item")
 				AddItem(src, itemData.name, fromAmount, toSlot, itemData.info)
 				QBCore.Functions.Notify(src, itemInfo["label"] .. " bought!", "success")
-				TriggerEvent("qb-log:server:CreateLog", "shops", "Shop item bought", "green", "**"..GetPlayerName(src) .. "** bought a " .. itemInfo["label"] .. " for $"..price)
+				
+				if fromInventory == "itemshop-police" then
+					if itemData.info.serie then
+						TriggerEvent("qb-log:server:CreateLog", "pdarmory", "Weapon taken from PD armory", "green", "**"..GetPlayerName(src) .. " signed out a weapon ("..QBCore.Shared.Items[itemData.name].label..") from the police armory. Serial: "..itemData.info.serie.." |  Quantity: "..fromAmount)
+					else
+						TriggerEvent("qb-log:server:CreateLog", "pdarmory", "Item taken from PD armory", "green", "**"..GetPlayerName(src) .. " grabbed a "..QBCore.Shared.Items[itemData.name].label.." from the police armory |  Quantity: "..fromAmount)
+					end
+				else
+					TriggerEvent("qb-log:server:CreateLog", "shops", "Shop item bought", "green", "**"..GetPlayerName(src) .. "** bought a " .. itemInfo["label"] .. " for $"..price)
+				end
 			else
 				QBCore.Functions.Notify(src, Lang:t("notify.notencash"), "error")
 			end
