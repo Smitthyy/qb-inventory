@@ -2714,13 +2714,13 @@ var requiredItemOpen = false;
         if (data.open) {
             $(".z-hotbar-inventory").html("");
             for (i = 1; i < 6; i++) {
-                var elem =
-                    '<div class="z-hotbar-item-slot" data-zhotbarslot="' +
-                    i +
-                    '"> <div class="z-hotbar-item-slot-key"><p>' +
-                    i +
-                    '</p></div><div class="z-hotbar-item-slot-img"></div><div class="z-hotbar-item-slot-label"><p>&nbsp;</p></div></div>';
-                $(".z-hotbar-inventory").append(elem);
+//                var elem =
+//                    '<div class="z-hotbar-item-slot" data-zhotbarslot="' +
+//                    i +
+//                    '"> <div class="z-hotbar-item-slot-key"><p>' +
+//                    i +
+//                    '</p></div><div class="z-hotbar-item-slot-img"></div><div class="z-hotbar-item-slot-label"><p>&nbsp;</p></div></div>';
+//                $(".z-hotbar-inventory").append(elem);
             }
             var elem =
                 '<div class="z-hotbar-item-slot" data-zhotbarslot="41"> <div class="z-hotbar-item-slot-key"><p>6 <i class="fas fa-lock"></i></p></div><div class="z-hotbar-item-slot-img"></div><div class="z-hotbar-item-slot-label"><p>&nbsp;</p></div></div>';
