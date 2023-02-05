@@ -2709,7 +2709,7 @@ var requiredItemOpen = false;
 
         handleDragDrop();
     };
-
+// Removing slot 6 from player inventories
     Inventory.ToggleHotbar = function(data) {
         if (data.open) {
             $(".z-hotbar-inventory").html("");
