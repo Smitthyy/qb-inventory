@@ -1876,7 +1876,7 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
 				else
 					QBCore.Functions.Notify(src, "You don't have enough cash..", "error")
 				end
-			else
+				else
 				-- drop
 				toInventory = tonumber(toInventory)
 				if toInventory == nil or toInventory == 0 then
